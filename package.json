@@ -9,7 +9,7 @@
     "watch": "export NODE_ENV=development && export PORT=3000 && nodemon --exec babel-node ./src/index.js | bunyan -o short",
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel -d ./dist ./src -s",
-    "start-prod": "export NODE_ENV=production && node dist/index.js | bunyan"
+    "start-prod": "export NODE_ENV=production && node dist/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",

@@ -10,7 +10,7 @@
       "name": "debug",
       "skipFiles": ["<node_internals>/**"],
       "runtimeExecutable": "${workspaceFolder}/node_modules/nodemon/bin/nodemon.js",
-      "args": ["${workspaceFolder}/src/server.js"],
+      "args": ["${workspaceFolder}/src/index.js"],
       "restart": true,
       "protocol": "inspector",
       "stopOnEntry": false,
@@ -18,7 +18,8 @@
       "outputCapture": "std",
       "sourceMaps": true,
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "PORT": "3000"
       }
     }
   ]
