@@ -14,13 +14,9 @@
       "restart": true,
       "protocol": "inspector",
       "stopOnEntry": false,
-      "runtimeArgs": ["--nolazy", "--require", "@babel/register"],
+      "runtimeArgs": ["--nolazy", "--require", "@babel/register", "--require", "dotenv/config"],
       "outputCapture": "std",
       "sourceMaps": true,
-      "env": {
-        "NODE_ENV": "development",
-        "PORT": "3000"
-      }
     }
   ]
 }

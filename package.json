@@ -6,10 +6,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "watch": "export NODE_ENV=development && export PORT=3000 && nodemon --exec babel-node ./src/index.js | bunyan -o short",
+    "watch": "nodemon --require dotenv/config --exec babel-node ./src/index.js | bunyan -o short",
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel -d ./dist ./src -s",
-    "start-prod": "export NODE_ENV=production && node dist/index.js"
+    "start": "node -r dotenv/config dist/index.js dotenv_config_path=<path_to_dotenv_file_in_prod>"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
