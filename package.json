@@ -1,0 +1,37 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Jarno",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "watch": "export NODE_ENV=development && export PORT=3000 && nodemon --exec babel-node ./src/index.js | bunyan -o short",
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel -d ./dist ./src -s",
+    "start-prod": "export NODE_ENV=production && node dist/index.js | bunyan"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.12.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bunyan": "^1.8.14",
+    "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "get-caller-file": "^2.0.5",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
