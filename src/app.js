@@ -1,5 +1,4 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import loggerBuilder from './utils/logger';
 import exampleController from './example/exampleController';
 
@@ -8,8 +7,8 @@ function appBuilder() {
 
   const app = express();
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
 
   if (process.env.NODE_ENV === 'development') {
     app.use((req, res, next) => {
